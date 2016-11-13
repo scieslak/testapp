@@ -5,7 +5,8 @@ script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
 - COVERAGE=true bundle exec rake test
-- bundle exec codeclimate-test-reporter
+after_success:
+- codeclimate-test-reporter
 services:
 - postgresql
 addons:
