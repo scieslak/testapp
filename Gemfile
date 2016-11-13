@@ -10,6 +10,7 @@ gem 'jquery-rails',                 '4.2.1'
 gem 'turbolinks',                   '5.0.1'
 gem 'jbuilder',                     '2.6.0'
 gem 'bcrypt',                       '3.1.11'
+gem 'codeclimate-test-reporter',    '0.4.8'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -29,7 +30,6 @@ group :test do
   gem 'minitest-reporters',         '1.1.12'
   gem 'rails-controller-testing',   '1.0.1'
   gem 'simplecov',                  '0.12.0'
-  gem 'codeclimate-test-reporter',  '0.4.8'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
