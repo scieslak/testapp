@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',                        '5.0.0.1'
-gem 'pg'
+gem 'pg',                           '0.18.4'
 gem 'puma',                         '3.6.0'
 gem 'sass-rails',                   '5.0.6'
 gem 'uglifier',                     '3.0.3'
@@ -28,7 +28,8 @@ group :test do
   gem 'guard-minitest',             '2.4.6'
   gem 'minitest-reporters',         '1.1.12'
   gem 'rails-controller-testing',   '1.0.1'
-  gem 'simplecov'
+  gem 'simplecov',                  '0.12.0'
+  gem 'codeclimate-test-reporter',  '0.4.8'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
