@@ -5,8 +5,8 @@ rvm:
 before_script:
 
 script:
-    - rails db:create
-    - rails db:migrate
+    - bundle exec rake db:create
+    - bundle exec rake db:migrate
     - bundle exec rake test
 
 services:
