@@ -1,19 +1,12 @@
 language: ruby
 rvm:
-- ruby-2.4.0-preview3
-- ruby-2.3.1
-- ruby-2.2.2
+  - 2.3.1
+  - 2.2.2
 
 addons:
-  code_climate:
-    repo_token: 0fa86c929875dc40e755988c861740daf9d2fda64a5af421276558a41a3de0a4
+  - postgresql: "9.5"
+
 script:
-- bundle exec rake db:create
-- bundle exec rake db:migrate
-- COVERAGE=true bundle exec rake test
-- gem install codeclimate-test-reporter
-after_success:
-- CODECLIMATE_REPO_TOKEN=0fa86c929875dc40e755988c861740daf9d2fda64a5af421276558a41a3de0a4 bundle exec codeclimate-test-reporter
-env:
-  matrix:
-    secure: L37UjcnUKjXsphjrKH+fjupKhj+h3qPulFLVbfRynLVSE4w8IlOFtrZqlyKKqQgP9i3mN1PAtmdC5Vqi7hCrXyFTK7b4rSBPFakC6jy29UaMlHT4TH8eiuw81QuFrPqN+Ge81tDFWrzBi/ggbNIR32tn9qJK/Tl6/iMfDK2iwQtAya8Z4UP4UtpOBp7Bc6rCr/sNoRfdqEBOemm0WzVljOooORXZtgt1Z6gc5Rwcx+Ykd3cvsxVmZafF/5Ae63OhNMNBmOJSbhMgS64QfFhWNMYCAVotOzvSis7booLo4XAe9rTrOdlTZI6AhTZFWwAisLBIdz6su+h8AY6CtibfRboXnwmu1Mt+zw84ZKAW5wLaMsDHxsRZw3b5w3H3MF9+xfaYhMAZcv4yw7Uc3fu0I9FqcpGuWo3jiKQLEz6mH6RK1fKnqPt/WrWTVELulufkaqn+nci7bIVrNjibN2+07rFAzr8ipBBPLUcRmwPq9KpzU8Ps3c3kyFHglHqb9NMECwaT7CT4joBuyyxA+AFXaAsM3PKi5cTKr8QDfn3NrwZ5hykLlTV+/eaMsOPV8O1FJ3AFfIGfcEGmbFVxpMtRRKJNuSh2ZNErd5dwWOgjRcccuKpWLNijmnSaYXpRYpf1+77pxULT02w28wNOKVg1SJ5Cek70zJcHkaxTRX3I7mk=
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
+  - bundle exec rake test
