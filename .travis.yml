@@ -1,6 +1,10 @@
 language: ruby
 rvm:
-- 2.3.1
+- 2.3.0
+
+addons:
+  code_climate:
+    repo_token: 0fa86c929875dc40e755988c861740daf9d2fda64a5af421276558a41a3de0a4
 script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
